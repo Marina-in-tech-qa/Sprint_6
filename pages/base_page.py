@@ -23,6 +23,10 @@ class BasePage:
     def click(self, locator):
         self.find_clickable_element(locator).click()
 
+    def click_with_js(self, locator):
+        element = self.find_element(locator)
+        self.driver.execute_script("arguments[0].click();", element)
+
     def write(self, locator, text):
         element = self.find_element(locator)
         element.clear()
