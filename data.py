@@ -1,10 +1,18 @@
+from datetime import datetime, timedelta
+
+
+def get_date(days):
+    return (
+        datetime.now() + timedelta(days=days)
+    ).strftime("%d.%m.%Y")
+
 FIRST_ORDER = {
     "name": "Марина",
     "surname": "Иванова",
     "address": "Москва",
     "metro": "Черкизовская",
     "phone": "+79991234567",
-    "date": "01.08.2026",
+    "date": get_date(1),
     "rent": "сутки",
     "color": "black",
     "comment": "Тест"
@@ -16,7 +24,7 @@ SECOND_ORDER = {
     "address": "Санкт-Петербург",
     "metro": "Сокольники",
     "phone": "+79997654321",
-    "date": "02.08.2026",
+    "date": get_date(2),
     "rent": "двое суток",
     "color": "grey",
     "comment": "Автотест"
