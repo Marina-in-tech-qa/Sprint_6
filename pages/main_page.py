@@ -24,6 +24,16 @@ class MainPage(BasePage):
         "//div[text()='Вопросы о важном']"
     )
 
+    SCOOTER_LOGO = (
+        By.XPATH,
+        "//img[@alt='Scooter']"
+    )
+
+    YANDEX_LOGO = (
+        By.XPATH,
+        "//img[@alt='Yandex']"
+    )
+
     @staticmethod
     def question_locator(index):
         return (
@@ -64,3 +74,9 @@ class MainPage(BasePage):
         return self.get_text(
             self.answer_locator(index)
         )
+
+    def click_scooter_logo(self):
+        self.click(self.SCOOTER_LOGO)
+
+    def click_yandex_logo(self):
+        self.click(self.YANDEX_LOGO)
