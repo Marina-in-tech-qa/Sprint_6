@@ -1,7 +1,9 @@
+import allure
 from pages.main_page import MainPage
 from urls import BASE_URL, ORDER_URL, DZEN_URL_PART
 
-
+@allure.feature("Logo")
+@allure.title("Переход на главную страницу по логотипу Самокат")
 def test_scooter_logo_redirects_to_main_page(driver):
     main_page = MainPage(driver)
 
@@ -11,7 +13,8 @@ def test_scooter_logo_redirects_to_main_page(driver):
 
     assert main_page.get_current_url() == BASE_URL
 
-
+@allure.feature("Logo")
+@allure.title("Переход на Дзен по логотипу Яндекс")
 def test_yandex_logo_opens_dzen_in_new_window(driver):
     main_page = MainPage(driver)
 

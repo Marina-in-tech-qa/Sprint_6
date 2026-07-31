@@ -1,11 +1,13 @@
 import pytest
+import allure
 
 from data import FIRST_ORDER, SECOND_ORDER
 from pages.main_page import MainPage
 from pages.order_page import OrderPage
 from urls import BASE_URL
 
-
+@allure.feature("Order")
+@allure.title("Оформление заказа с набором данных: {order_data[name]}")
 @pytest.mark.parametrize(
     "order_data",
     [FIRST_ORDER, SECOND_ORDER]
