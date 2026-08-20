@@ -1,5 +1,6 @@
 from selenium.webdriver.common.by import By
 
+
 class OrderPageLocators:
 
     NAME_INPUT = (
@@ -47,16 +48,6 @@ class OrderPageLocators:
         "//input[@placeholder='Комментарий для курьера']"
     )
 
-    ORDER_BUTTON = (
-        By.XPATH,
-        "//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']"
-    )
-
-    YES_BUTTON = (
-        By.XPATH,
-        "//button[text()='Да']"
-    )
-
     BLACK_SCOOTER = (
         By.XPATH,
         "//label[text()='чёрный жемчуг']"
@@ -67,9 +58,14 @@ class OrderPageLocators:
         "//label[text()='серая безысходность']"
     )
 
-    RENTAL_PERIOD = (
+    ORDER_BUTTON = (
         By.XPATH,
-        "//div[text()='* Срок аренды']"
+        "//div[contains(@class, 'Order_Buttons')]//button[text()='Заказать']"
+    )
+
+    YES_BUTTON = (
+        By.XPATH,
+        "//button[text()='Да']"
     )
 
     ORDER_SUCCESS = (

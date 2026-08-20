@@ -18,5 +18,4 @@ __pycache__/
 Thumbs.db
 
 # Allure
-allure-results/
 allure-report/
